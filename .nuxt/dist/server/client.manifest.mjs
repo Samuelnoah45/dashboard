@@ -1,0 +1,1 @@
+export { default } from "file:///home/sky/dev/minab/EYEA/eyea-web-client/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"

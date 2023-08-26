@@ -1,0 +1,82 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "paths": {
+      "#imports": [
+        "/home/sky/dev/minab/EYEA/eyea-web-client/.nuxt/types/nitro-imports"
+      ],
+      "#paths": [
+        "/home/sky/dev/minab/EYEA/eyea-web-client/node_modules/nuxt/dist/core/runtime/nitro/paths"
+      ],
+      "~": [
+        "/home/sky/dev/minab/EYEA/eyea-web-client"
+      ],
+      "~/*": [
+        "/home/sky/dev/minab/EYEA/eyea-web-client/*"
+      ],
+      "@": [
+        "/home/sky/dev/minab/EYEA/eyea-web-client"
+      ],
+      "@/*": [
+        "/home/sky/dev/minab/EYEA/eyea-web-client/*"
+      ],
+      "~~": [
+        "/home/sky/dev/minab/EYEA/eyea-web-client"
+      ],
+      "~~/*": [
+        "/home/sky/dev/minab/EYEA/eyea-web-client/*"
+      ],
+      "@@": [
+        "/home/sky/dev/minab/EYEA/eyea-web-client"
+      ],
+      "@@/*": [
+        "/home/sky/dev/minab/EYEA/eyea-web-client/*"
+      ],
+      "assets": [
+        "/home/sky/dev/minab/EYEA/eyea-web-client/assets"
+      ],
+      "assets/*": [
+        "/home/sky/dev/minab/EYEA/eyea-web-client/assets/*"
+      ],
+      "public": [
+        "/home/sky/dev/minab/EYEA/eyea-web-client/public"
+      ],
+      "public/*": [
+        "/home/sky/dev/minab/EYEA/eyea-web-client/public/*"
+      ],
+      "pinia": [
+        "/home/sky/dev/minab/EYEA/eyea-web-client/node_modules/pinia/dist/pinia"
+      ],
+      "#image": [
+        "/home/sky/dev/minab/EYEA/eyea-web-client/node_modules/@nuxt/image/dist/runtime"
+      ],
+      "#image/*": [
+        "/home/sky/dev/minab/EYEA/eyea-web-client/node_modules/@nuxt/image/dist/runtime/*"
+      ],
+      "#apollo": [
+        "/home/sky/dev/minab/EYEA/eyea-web-client/.nuxt/apollo"
+      ],
+      "#color-mode-options": [
+        "/home/sky/dev/minab/EYEA/eyea-web-client/.nuxt/color-mode-options"
+      ],
+      "#content/server": [
+        "/home/sky/dev/minab/EYEA/eyea-web-client/node_modules/@nuxt/content/dist/runtime/server/index"
+      ]
+    }
+  },
+  "include": [
+    "/home/sky/dev/minab/EYEA/eyea-web-client/.nuxt/types/nitro-nuxt.d.ts",
+    "./types/nitro.d.ts",
+    "../**/*",
+    "../server/**/*"
+  ]
+}
