@@ -9,7 +9,7 @@
     "skipLibCheck": true,
     "strict": true,
     "allowJs": true,
-    "baseUrl": "/home/sky/dev/minab/EYEA/eyea-web-client",
+    "baseUrl": "/home/sky/eyea-web-client",
     "noEmit": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
@@ -18,79 +18,79 @@
     ],
     "paths": {
       "~": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client"
+        "/home/sky/eyea-web-client"
       ],
       "~/*": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client/*"
+        "/home/sky/eyea-web-client/*"
       ],
       "@": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client"
+        "/home/sky/eyea-web-client"
       ],
       "@/*": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client/*"
+        "/home/sky/eyea-web-client/*"
       ],
       "~~": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client"
+        "/home/sky/eyea-web-client"
       ],
       "~~/*": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client/*"
+        "/home/sky/eyea-web-client/*"
       ],
       "@@": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client"
+        "/home/sky/eyea-web-client"
       ],
       "@@/*": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client/*"
+        "/home/sky/eyea-web-client/*"
       ],
       "assets": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client/assets"
+        "/home/sky/eyea-web-client/assets"
       ],
       "assets/*": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client/assets/*"
+        "/home/sky/eyea-web-client/assets/*"
       ],
       "public": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client/public"
+        "/home/sky/eyea-web-client/public"
       ],
       "public/*": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client/public/*"
+        "/home/sky/eyea-web-client/public/*"
       ],
       "#app": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client/node_modules/nuxt/dist/app"
+        "/home/sky/eyea-web-client/node_modules/nuxt/dist/app"
       ],
       "#app/*": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client/node_modules/nuxt/dist/app/*"
+        "/home/sky/eyea-web-client/node_modules/nuxt/dist/app/*"
       ],
       "vue-demi": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client/node_modules/nuxt/dist/app/compat/vue-demi"
+        "/home/sky/eyea-web-client/node_modules/nuxt/dist/app/compat/vue-demi"
       ],
       "pinia": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client/node_modules/pinia/dist/pinia"
+        "/home/sky/eyea-web-client/node_modules/pinia/dist/pinia"
       ],
       "#image": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client/node_modules/@nuxt/image/dist/runtime"
+        "/home/sky/eyea-web-client/node_modules/@nuxt/image/dist/runtime"
       ],
       "#image/*": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client/node_modules/@nuxt/image/dist/runtime/*"
+        "/home/sky/eyea-web-client/node_modules/@nuxt/image/dist/runtime/*"
       ],
       "#apollo": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client/.nuxt/apollo"
+        "/home/sky/eyea-web-client/.nuxt/apollo"
       ],
       "#color-mode-options": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client/.nuxt/color-mode-options"
+        "/home/sky/eyea-web-client/.nuxt/color-mode-options"
       ],
       "#vue-router": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client/.nuxt/vue-router"
+        "/home/sky/eyea-web-client/.nuxt/vue-router"
       ],
       "#imports": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client/.nuxt/imports"
+        "/home/sky/eyea-web-client/.nuxt/imports"
       ],
       "#build": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client/.nuxt"
+        "/home/sky/eyea-web-client/.nuxt"
       ],
       "#build/*": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client/.nuxt/*"
+        "/home/sky/eyea-web-client/.nuxt/*"
       ],
       "#components": [
-        "/home/sky/dev/minab/EYEA/eyea-web-client/.nuxt/components"
+        "/home/sky/eyea-web-client/.nuxt/components"
       ]
     }
   },
@@ -98,14 +98,14 @@
     "./nuxt.d.ts",
     "../**/*",
     "../**/*",
-    "/home/sky/dev/minab/EYEA/eyea-web-client",
-    "/home/sky/dev/minab/EYEA/eyea-web-client/*",
-    "/home/sky/dev/minab/EYEA/eyea-web-client",
-    "/home/sky/dev/minab/EYEA/eyea-web-client/*",
-    "/home/sky/dev/minab/EYEA/eyea-web-client",
-    "/home/sky/dev/minab/EYEA/eyea-web-client/*",
-    "/home/sky/dev/minab/EYEA/eyea-web-client",
-    "/home/sky/dev/minab/EYEA/eyea-web-client/*"
+    "/home/sky/eyea-web-client",
+    "/home/sky/eyea-web-client/*",
+    "/home/sky/eyea-web-client",
+    "/home/sky/eyea-web-client/*",
+    "/home/sky/eyea-web-client",
+    "/home/sky/eyea-web-client/*",
+    "/home/sky/eyea-web-client",
+    "/home/sky/eyea-web-client/*"
   ],
   "exclude": [
     "../dist",

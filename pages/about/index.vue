@@ -367,28 +367,6 @@ import "vue3-carousel/dist/carousel.css";
   </div>
 </template>
 <style>
-.carousel__next,
-.carousel__prev {
-  @apply bg-[#5c5b5bb9] rounded-full;
-}
 
-.carousel__pagination-button::after {
-  @apply bg-primary-light h-2 rounded-lg hover:bg-primary;
-}
-.carousel__pagination-button--active::after {
-  @apply bg-primary w-8 rounded-lg;
-}
 
-.struct_Icon {
-  @apply text-secondary-text md:text-[40px] text-[32px] dark:text-dark-text-secondary;
-}
-.line {
-  @apply md:w-[3px] w-[1px] md:h-[100px] h-[45px] bg-[#655E5E] dark:bg-dark-text-secondary;
-}
-.fullName {
-  @apply hidden md:inline-block;
-}
-.short {
-  @apply md:hidden;
-}
 </style>

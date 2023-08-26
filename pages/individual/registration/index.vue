@@ -1,9 +1,7 @@
 <script setup>
 import { Form, useForm } from "vee-validate";
 
-definePageMeta({
-  layout: "registration",
-});
+
 console.log("refevevfrf");
 const { handleSubmit } = useForm({});
 const Disability = ref("");

@@ -118,11 +118,11 @@
 <style>
 
 .contact_name {
-  @apply md:text-4xl text-lg text-primary-text font-bold dark:text-white
+  @apply md:text-4xl text-lg text-primary-text font-bold 
 
 }
 .contact_value {
-  @apply text-primary-text md:text-xl text-sm break-all dark:text-dark-text-secondary
+  @apply text-primary-text md:text-xl text-sm break-all 
 
 }
 </style>

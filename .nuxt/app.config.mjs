@@ -1,5 +1,5 @@
 
-import { defuFn } from '/home/sky/dev/minab/EYEA/eyea-web-client/node_modules/defu/dist/defu.mjs'
+import { defuFn } from '/home/sky/eyea-web-client/node_modules/defu/dist/defu.mjs'
 
 const inlineConfig = {}
 

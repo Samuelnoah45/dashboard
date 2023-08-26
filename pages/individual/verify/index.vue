@@ -1,7 +1,5 @@
 <script setup >
-definePageMeta({
-  layout: "registration",
-});
+
 import VOtpInput from "vue3-otp-input";
 const router = useRouter();
 const otpInput = ref(null);

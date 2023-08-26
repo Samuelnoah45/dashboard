@@ -1,7 +1,5 @@
 <script setup>
-definePageMeta({
-  layout: "registration",
-});
+
 </script>
 
 <template>

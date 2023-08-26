@@ -1,9 +1,7 @@
 <script setup>
 import { Form, useForm } from "vee-validate";
 const router = useRouter();
-definePageMeta({
-  layout: "registration",
-});
+
 const { handleSubmit } = useForm({});
 const submit = handleSubmit(async (values) => {
   router.push("/individual/verify");

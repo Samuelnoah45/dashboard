@@ -1,7 +1,7 @@
 {
-  "_hash": "oI8Qz1mu3N",
+  "_hash": "LLMZ9JVime",
   "project": {
-    "rootDir": "/home/sky/dev/minab/EYEA/eyea-web-client"
+    "rootDir": "/home/sky/eyea-web-client"
   },
   "versions": {
     "nuxt": "3.6.5"
