@@ -22,7 +22,8 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../node_modules/@pinia-plugin-persistedstate/nuxt/dist/runtime/plugin").default> &
   InjectionType<typeof import("../../plugins/apolloError").default> &
   InjectionType<typeof import("../../plugins/rules").default> &
-  InjectionType<typeof import("../../plugins/visible").default>
+  InjectionType<typeof import("../../plugins/visible").default> &
+  InjectionType<typeof import("../../plugins/vue-awesome-paginate").default>
 
 declare module '#app' {
   interface NuxtApp extends NuxtAppInjections { }

@@ -111,12 +111,12 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
             </div>
           </div>
 
-          <NuxtLink to="/events" class="flex justify-end text-base">
+          <div  class="flex justify-end text-base">
             <div class="flex items-center space-x-2">
               <p>Continue</p>
               <Icon name="tabler:arrow-right"></Icon>
             </div>
-          </NuxtLink>
+          </div>
         </NuxtLink>
         <NuxtLink to="/member"
           class="border-2 hover:border-primary px-8 pt-8 pb-4 rounded-lg flex flex-col justify-between"

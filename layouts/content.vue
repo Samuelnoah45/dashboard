@@ -35,7 +35,7 @@
             <NuxtLink to="/content/team" class="">
               <div class="flex space-x-2 pl-12 items-center">
                 <Icon name="ant-design:team-outlined" class="text-3xl"> </Icon>
-                <p class="font-medium text-lg">Setting</p>
+                <p class="font-medium text-lg">Team</p>
               </div>
             </NuxtLink>
           </div>
@@ -43,7 +43,7 @@
             <NuxtLink to="/content/newsletter" class="">
               <div class="flex space-x-2 pl-12 items-center">
                 <Icon name="uil:mailbox" class="text-3xl"> </Icon>
-                <p class="font-medium text-lg">Setting</p>
+                <p class="font-medium text-lg">Newsletter</p>
               </div>
             </NuxtLink>
           </div>
@@ -51,7 +51,7 @@
             <NuxtLink to="/content/gallery" class="">
               <div class="flex space-x-2 pl-12 items-center">
                 <Icon name="grommet-icons:gallery" class="text-xl"> </Icon>
-                <p class="font-medium text-lg">Setting</p>
+                <p class="font-medium text-lg">Gallery</p>
               </div>
             </NuxtLink>
           </div>
@@ -63,7 +63,7 @@
     </div>
     <div>
       <div
-        class="flex justify-center space-x-2 w-full bg-primary p-2 pt-6 text-black"
+        class="flex justify-center z-50 space-x-2 w-full mt-4 bg-primary p-2 pt-6 text-black"
       >
         <p>© 2023 EYEA. All rights reserved.</p>
         <div class="flex space-x-2">

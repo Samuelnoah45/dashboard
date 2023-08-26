@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   //nuxt apollo module
-  // ssr:false,
+  ssr:false,
   modules: [
     "@vueuse/nuxt",
     "@pinia/nuxt",

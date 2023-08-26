@@ -18,7 +18,7 @@ const openMenu = ():void =>  {
   isMenuOpen.value = isMenuOpen.value == false ? true : false;
 };
 const name = function name(params: string):string {
-  if (params!.split("/").length == 2) {
+  if (params !='/' && params!.split("/").length == 2 ) {
     return "Dashboard";
   }
   if (params!.split("/").length == 3 && params!.split("/")[2] == "all") {
