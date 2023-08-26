@@ -5,11 +5,11 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
 <template>
   <div class="grid h-full grid-cols-12 w-full font-poppins">
     <div
-      class="col-span-12 h-full px-36 justify-center flex items-center overflow-y-scroll"
+      class="col-span-12 h-full px-36 justify-center flex items-center "
     >
       <div class="grid grid-cols-4 gap-32">
-        <div
-          class="flex flex-col border-2 px-8 pt-8 pb-4 rounded-lg justify-between"
+        <NuxtLink to="/content"
+          class="flex flex-col hover:border-primary border-2 px-8 pt-8 pb-4 rounded-lg justify-between"
         >
           <div class="space-y-4">
             <div>
@@ -63,7 +63,7 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
               <Icon name="tabler:arrow-right"></Icon>
             </div>
           </div>
-        </div>
+        </NuxtLink>
         <NuxtLink to="/events" 
           class="border-2 px-8 pt-8 pb-4 hover:border-primary rounded-lg flex flex-col justify-between"
         >
@@ -118,8 +118,8 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
             </div>
           </NuxtLink>
         </NuxtLink>
-        <div
-          class="border-2 px-8 pt-8 pb-4 rounded-lg flex flex-col justify-between"
+        <NuxtLink to="/member"
+          class="border-2 hover:border-primary px-8 pt-8 pb-4 rounded-lg flex flex-col justify-between"
         >
           <div class="space-y-4">
             <div>
@@ -173,10 +173,10 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
               <Icon name="tabler:arrow-right"></Icon>
             </div>
           </div>
-        </div>
+        </NuxtLink>
 
-        <div
-          class="border-2 px-8 pt-8 pb-4 rounded-lg flex flex-col justify-between"
+        <NuxtLink to="/user"
+          class="border-2  hover:border-primary px-8 pt-8 pb-4 rounded-lg flex flex-col justify-between"
         >
           <div class="space-y-4">
             <div>
@@ -227,7 +227,7 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
               <Icon name="tabler:arrow-right"></Icon>
             </div>
           </div>
-        </div>
+        </NuxtLink>
       </div>
     </div>
   </div>

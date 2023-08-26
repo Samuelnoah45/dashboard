@@ -1,12 +1,12 @@
 <script setup></script>
 <template>
   <div class="h-screen">
-    <NavBar  dashboard-name="Events"/>
+    <NavBar dashboard-name="Events" />
     <div class="h-[81vh] grid grid-cols-12 w-full">
       <div class="col-span-2 pt-20 border-primary border-r">
         <div class="space-y-10">
           <div>
-            <NuxtLink to="/events" class="">
+            <NuxtLink to="/content" class="">
               <div class="flex space-x-2 pl-12 items-center">
                 <Icon name="material-symbols:speed-outline" class="text-2xl">
                 </Icon>
@@ -15,36 +15,42 @@
             </NuxtLink>
           </div>
           <div>
-            <NuxtLink to="/events/all" class="">
+            <NuxtLink to="/content/news-articles-research" class="">
               <div class="flex space-x-2 pl-12 items-center">
-                <Icon name="carbon:ticket" class="text-2xl"> </Icon>
-                <p class="font-medium text-lg">Events</p>
+                <Icon name="tabler:news" class="text-2xl"> </Icon>
+                <p class="font-medium text-lg">News, Articles & Research</p>
               </div>
             </NuxtLink>
           </div>
           <div>
-            <NuxtLink to="/events/zelela" class="">
-              <div class="flex space-x-2 pl-12  blackIcon  items-center">
-                <p>
-                  <img
-                    src="@/assets/images/logos/zelela_icon_black.png"
-                    alt=""
-                  />
-                </p>
-                <!-- <div>
-                  <img
-                    src="@/assets/images/logos/zelela_log_color.png"
-                    alt=""
-                  />
-                </div> -->
-                <p class="font-medium text-lg">Zelela</p>
+            <NuxtLink to="/content/partnership" class="">
+              <div class="flex space-x-2 pl-12 blackIcon items-center">
+                <Icon name="mdi:partnership-outline" class="text-2xl"> </Icon>
+
+                <p class="font-medium text-lg">Partnership</p>
               </div>
             </NuxtLink>
           </div>
           <div>
-            <NuxtLink to="/events/setting" class="">
+            <NuxtLink to="/content/team" class="">
               <div class="flex space-x-2 pl-12 items-center">
-                <Icon name="uiw:setting-o" class="text-xl"> </Icon>
+                <Icon name="ant-design:team-outlined" class="text-3xl"> </Icon>
+                <p class="font-medium text-lg">Setting</p>
+              </div>
+            </NuxtLink>
+          </div>
+          <div>
+            <NuxtLink to="/content/newsletter" class="">
+              <div class="flex space-x-2 pl-12 items-center">
+                <Icon name="uil:mailbox" class="text-3xl"> </Icon>
+                <p class="font-medium text-lg">Setting</p>
+              </div>
+            </NuxtLink>
+          </div>
+          <div>
+            <NuxtLink to="/content/gallery" class="">
+              <div class="flex space-x-2 pl-12 items-center">
+                <Icon name="grommet-icons:gallery" class="text-xl"> </Icon>
                 <p class="font-medium text-lg">Setting</p>
               </div>
             </NuxtLink>

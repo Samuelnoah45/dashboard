@@ -64,11 +64,11 @@
 </template>
 <style>
 .lists{
-  @apply text-primary-text-light dark:text-dark-text-secondary
+  @apply text-primary-text-light 
 
 }
 
 .titles{
-  @apply text-primary-text font-semibold dark:text-white
+  @apply text-primary-text font-semibold 
 }
 </style>

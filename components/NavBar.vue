@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { Menu, MenuButton, MenuItems, MenuItem, Switch } from "@headlessui/vue";
 const route = useRoute();
 const colorMode = useColorMode();
@@ -13,10 +13,21 @@ const props = defineProps({
   }
 });
 const isMenuOpen = ref(false);
-const openMenu = () => {
+const openMenu = ():void =>  {
   console.log("isMenuOpen", isMenuOpen.value);
   isMenuOpen.value = isMenuOpen.value == false ? true : false;
 };
+const name = function name(params: string):string {
+  if (params!.split("/").length == 2) {
+    return "Dashboard";
+  }
+  if (params!.split("/").length == 3 && params!.split("/")[2] == "all") {
+    return params!.split("/")[1];
+  }
+  
+  return  params!.split("/")[2];
+}
+
 const NavBars = ref([
   {
     name: "about",
@@ -39,12 +50,12 @@ const NavBars = ref([
         type="image"
         src="@/assets/images/logos/EYEA_logos/EYEA_logo_color.svg"
         alt=""
-        class="w-[200px] h-[100px]"
+        class="w-[170px]"
       />
       </NuxtLink>
     </div>
     <div class="col-span-10 flex justify-between px-20 items-center">
-      <div>{{ dashboardName }}</div>
+      <div class="text-3xl font-medium  text-primary capitalize ">{{ name(route.path)}}</div>
       <div class="flex items-center space-x-4">
         <Icon name="fluent:mail-multiple-16-regular" class="text-2xl font-semibold"></Icon>
         <Icon name="clarity:notification-line" class="text-2xl font-semibold"></Icon>
