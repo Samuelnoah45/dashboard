@@ -18,10 +18,12 @@ const openMenu = ():void =>  {
   isMenuOpen.value = isMenuOpen.value == false ? true : false;
 };
 const name = function name(params: string):string {
+  console.log("params", params);
+  
   if (params !='/' && params!.split("/").length == 2 ) {
     return "Dashboard";
   }
-  if (params!.split("/").length == 3 && params!.split("/")[2] == "all") {
+  if (params!.split("/").length == 3 && params!.split("/")[2] == "all" || params!.split("/")[1] == "member") {
     return params!.split("/")[1];
   }
   
@@ -43,18 +45,8 @@ const NavBars = ref([
 </script>
 
 <template>
-  <div class="grid grid-cols-12">
-    <div class="flex w-full lg:col-span-2  col-span-3 items-center " :class="route.path !='/' ?'lg:border-r border-primary':''">
-      <NuxtLink  to="/">
-      <img
-        type="image"
-        src="@/assets/images/logos/EYEA_logos/EYEA_logo_color.svg"
-        alt=""
-        class="w-[200px]"
-      />
-      </NuxtLink>
-    </div>
-    <div class="lg:col-span-10 col-span-9 flex justify-between lg:px-20 items-center">
+ 
+    <div class="l flex justify-between lg:px-10 py-4 items-center">
       <div class="lg:text-3xl font-medium   text-primary capitalize ">{{ name(route.path)}}</div>
       <div class="flex items-center flex-none lg:space-x-4 space-x-2">
         <Icon name="fluent:mail-multiple-16-regular" class="text-2xl font-semibold"></Icon>
@@ -98,7 +90,6 @@ const NavBars = ref([
         </Menu>
       </div>
     </div>
-  </div>
 </template>
 
 <style>

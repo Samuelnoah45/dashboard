@@ -1,12 +1,12 @@
 <template>
   <div class="h-screen">
     <NavBar />
-    <div class="h-[81vh] w-full ">
+    <div class="h-[86vh] w-full ">
       <slot></slot>
     </div>
     <div>
       <div
-        class="flex justify-center space-x-2 w-full pt-6 bg-primary p-2 text-black"
+        class="flex  fixed bottom-0 left-0 z-50 justify-center space-x-2 w-full mt-2 bg-primary-light p-2 text-black"
       >
         <p>© 2023 EYEA. All rights reserved.</p>
         <div class="flex space-x-2">

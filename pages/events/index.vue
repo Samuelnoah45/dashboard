@@ -52,7 +52,7 @@ definePageMeta({
 });
 </script>
 <template>
-  <div class="grid grid-cols-12 px-20 font-poppins">
+  <div class="grid grid-cols-12 px-10 font-poppins">
     <div class="col-span-9">
       <div class="grid grid-cols-2 gap-4">
         <div class="grid grid-cols-2 text-4xl border-2 p-4 rounded-lg">

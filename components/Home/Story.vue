@@ -2,7 +2,7 @@
 
 <template>
   <div
-    class="grid md:grid-cols-3 grid-cols-1 h-[80%] text-justify md:px-20 px-2"
+    class="grid md:grid-cols-3 grid-cols-1 h-[80%] text-justify md:px-10 px-2"
   >
     <div class="space-y-4 md:leading-relaxed md:text-base text-sm md:pt-[20%] dark:text-white">
       <div class="flex justify-center text-justify items-center">

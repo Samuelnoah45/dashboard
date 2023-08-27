@@ -43,6 +43,10 @@ module.exports = {
       // => @media (min-width: 1920px) { ... }
     },
     extend: {
+      gridTemplateColumns: {
+        13: "repeat(13, minmax(0, 1fr))",
+      },
+      
       fontFamily: {
         poppins: ['"Poppins"', "sans-serif"],
       },
@@ -62,8 +66,8 @@ module.exports = {
       colors: {
         primary: "#FFBE40",
         "primary-light": "#FFDA92",
-        "secondary": "#EBFFF2",
-        "third": "#22C55E",
+        secondary: "#EBFFF2",
+        third: "#22C55E",
         "third-bold": "#2F9D55",
         "third-light": "#DCFCE7",
         "third-light2": "#BDF9D1",
@@ -77,7 +81,6 @@ module.exports = {
         // "dark-secondary-light": "#2B193C",
         // "dark-third": "#0F172A",
         // "dark-text-secondary": "#BBC3CF",
-      
       },
     },
   },

@@ -34,7 +34,7 @@ const partners = ref([
 ]);
 </script>
 <template>
-  <div class="lg:px-20 px-4 space-y-4">
+  <div class="lg:px-10 px-4 space-y-4">
     <div class="flex items-end justify-between">
           <div class="w-1/2 lg:w-auto h-10">
             <InputsTextfield name="search" class="pl-10">
@@ -53,7 +53,7 @@ const partners = ref([
             <p>New Partner</p>
           </button>
         </div>
-    <div class="grid lg:grid-cols-3 gap-20 lg:h-[72vh] px-2 overflow-y-scroll">
+    <div class="grid lg:grid-cols-3 gap-10 lg:h-[72vh]  overflow-y-scroll">
       <div
         v-for="partner  in partners" :key="partner.id"
         class="rounded-lg space-y-4 flex-col flex justify-between border-2 p-4"

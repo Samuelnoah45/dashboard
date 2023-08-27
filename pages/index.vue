@@ -5,9 +5,9 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
 <template>
   <div class="grid h-full grid-cols-12 w-full font-poppins">
     <div
-      class="col-span-12 h-full px-36 justify-center flex items-center "
+      class="col-span-12 h-full px-10 justify-center flex items-center "
     >
-      <div class="grid grid-cols-4 gap-32">
+      <div class="grid grid-cols-4 gap-10">
         <NuxtLink to="/content"
           class="flex flex-col hover:border-primary border-2 px-8 pt-8 pb-4 rounded-lg justify-between"
         >

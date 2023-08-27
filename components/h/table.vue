@@ -1,282 +1,285 @@
-<script setup>
-const props = defineProps({
-  headers: {
-    type: Array,
-  },
-  hasRecordsPerPage: {
-    type: Boolean,
-  },
-  hasDateFilter: {
-    type: Boolean,
-  },
-  items: {
-    type: Array,
-  },
-  //to store ids of checked items
-  checkedItems: {
-    type: Array,
-    default: [],
-  },
-  checkedItemsData: {
-    type: Array,
-    default: [],
-  },
-  hasCheckBox: {
-    type: Boolean,
-    default: false,
-  },
-  rowStyle: {
-    type: String,
-    default: "",
-  },
-  rowHeadStyle: {
-    type: String,
-    default: "",
-  },
-  sort: {
-    type: Array,
-  },
-  loading: {
-    type: Boolean,
-    default: true,
-  },
-  color1: String,
-  color2: String,
-  color3: String,
-  supporterClass: {
-    type: String,
-  },
-  supportHeaderClass: {
-    type: String,
-  },
-});
+<script>
+import _get from "lodash.get";
+import _set from "lodash.set";
 
-const emits = defineEmits([
-  "click:row",
-  "update:sort",
-  "update:checkedItems",
-  "update:checkedItemsData",
-]);
+export default {
+  name: "v-table",
+  components: {},
+  props: {
+    headers: {
+      type: Array,
+    },
+    total: {
+      type: Boolean,
+      default: false,
+    },
+    items: {
+      type: Array,
+    },
+    //to store ids of checked items
+    checkedItems: {
+      type: Array,
+      default: [],
+    },
+    hasCheckBox: {
+      type: Boolean,
+      default: false,
+    },
 
-const _get = useGet;
-const _set = useSet;
-const _sort = ref({});
-onMounted(() => {
-  props.sort.forEach((item) => {
-    console.log("first", item);
-    _sort.value = { ..._sort.value, ...item };
-  });
-});
-
-const checkCheckedAll = computed(() => {
-  return (
-    props.checkedItems.length == props.items.length && props.items?.length > 0
-  );
-});
-
-function sort_by(header) {
-  console.log("sort", _sort.value);
-  if (header.sortable === false) return;
-
-  let direction = _sort.value[header.value];
-  if (direction && direction === "asc") {
-    console.log("if one", _sort.value);
-    _sort.value[header.value] = "desc";
-  } else if (direction && direction === "desc") {
-    console.log("if else", _sort.value);
-    delete _sort.value[header.value];
-  } else {
-    console.log("else", _sort.value, header.value);
-    _sort.value[header.value] = "asc";
-  }
-
-  let sort = [];
-  console.log("before loop", _sort.value);
-  Object.keys(_sort.value).forEach((key) => {
-    let obj = {};
-    console.log("sortloop", key, "and", _sort.value[key]);
-    _set(obj, key, _sort.value[key]);
-    console.log("obj", obj);
-    sort.push(obj);
-  });
-  console.log("final ", sort);
-  emits("update:sort", sort);
-}
-
-function rowChecked(item, id) {
-  emits(
+    hasRecordsPerPage: {
+      type: Boolean,
+      default: true,
+    },
+    sort: {
+      type: Array,
+    },
+    loading: {
+      type: Boolean,
+      default: true,
+    },
+    supporterClass: {
+      type: String,
+    },
+    supportHeaderClass: {
+      type: String,
+    },
+    createRow: {
+      type: String,
+    },
+    searchPlaceholder: String,
+    bodyClass: String,
+  },
+  emits: [
+    "click:row",
     "update:checkedItems",
-    Array.isArray(props.checkedItems)
-      ? props.checkedItems.includes(id)
-        ? props.checkedItems.filter((_id) => id !== _id)
-        : [...props.checkedItems, id]
-      : [id]
-  );
-  emits(
-    "update:checkedItemsData",
-    Array.isArray(props.checkedItemsData)
-      ? props.checkedItemsData?.map((e) => e?.id).includes(id)
-        ? props.checkedItemsData.filter((_id) => id !== _id.id)
-        : [...props.checkedItemsData, item]
-      : [item]
-  );
-}
+    "search",
+    "changedStatus",
+    "createRow",
+  ],
+  data() {
+    return {
+      _sort: {},
+      searchKey: "",
+      recordsPerPage: 10,
+      statusValue: "All",
 
-function rowCheckedAll() {
-  emits(
-    "update:checkedItems",
-    props.checkedItems.length == props.items.length
-      ? []
-      : props.items.map((item) => item.id)
-  );
-  emits(
-    "update:checkedItemsData",
-    props.checkedItems.length == props.items.length
-      ? []
-      : props.items.map((item) => item)
-  );
-}
+      status: [
+        {
+          id: "all",
+          name: "All",
+        },
+        {
+          id: "approved",
+          name: "Approved",
+        },
+        {
+          id: "pending",
+          name: "Pending",
+        },
+        {
+          id: "submitted",
+          name: "Submitted",
+        },
+        {
+          id: "rejected",
+          name: "Rejected",
+        },
+        {
+          id: "Roll backed",
+          name: "rollBacked",
+        },
+      ],
+    };
+  },
+  created() {
+    this.sort.forEach((item) => {
+      this._sort = { ...this._sort, ...item };
+    });
+  },
+  watch: {
+    searchKey(newValue) {
+      this.$emit("search", newValue);
+    },
+
+    recordsPerPage(newRecordsPerPage) {
+      this.$emit("changedRecordsPerPage", newRecordsPerPage);
+    },
+    statusValue(newStatusValue) {
+      this.$emit("changedStatus", newStatusValue);
+    },
+  },
+  computed: {
+    checkCheckedAll() {
+      return (
+        this.checkedItems.length === this.items.length && this.items.length > 0
+      );
+    },
+  },
+  methods: {
+    _get,
+    _set,
+    sort_by(header) {
+      if (header.sortable === false) return;
+
+      let direction = this._sort[header.value];
+
+      if (direction && direction === "asc") {
+        this._sort[header.value] = "desc";
+      } else if (direction && direction === "desc") {
+        delete this._sort[header.value];
+      } else {
+        this._sort[header.value] = "asc";
+      }
+
+      let sort = [];
+
+      Object.keys(this._sort).forEach((key) => {
+        let obj = {};
+        _set(obj, key, this._sort[key]);
+        sort.push(obj);
+      });
+
+      this.$emit("update:sort", sort);
+    },
+    rowChecked(id) {
+      this.$emit(
+        "update:checkedItems",
+        Array.isArray(this.checkedItems)
+          ? this.checkedItems.includes(id)
+            ? this.checkedItems.filter((_id) => id !== _id)
+            : [...this.checkedItems, id]
+          : [id]
+      );
+    },
+    rowCheckedAll() {
+      this.$emit(
+        "update:checkedItems",
+        this.checkedItems.length == this.items.length
+          ? []
+          : this.items.map((item) => item.id)
+      );
+    },
+
+    click_row(item, e) {
+      
+      this.$emit("click:row", item, e);
+    },
+  },
+};
 </script>
 
 <template>
-  <div class="h-[6px]"></div>
-  <!-- component -->
-  <div
-    :class="supporterClass"
-    class="sm:rounded-lg relative border border-table-border"
-  >
-    <HProgress
-      v-if="loading"
-      height="h-[6px]"
-      :color1="color1"
-      :color2="color2"
-      :color3="color3"
-    />
-    <table
-      class="w-full font-body"
-      :class="[items.length ? 'divide-y divide-secondary-4' : '']"
-    >
-      <thead class="bg-white">
-        <tr>
-          <th
-            v-if="hasCheckBox"
-            class="text-xs 2xl:px-4 px-2 font-bold text-left items-center text-black 2xl:py-5 hidden py-3 lg:table-cell tracking-wider uppercase"
-            :class="rowHeadStyle"
-          >
-            <input
-              v-if="checkCheckedAll"
-              type="checkbox"
-              @click.prevent="rowCheckedAll()"
-              :checked="checkCheckedAll"
-              class="accent-teal-800 focus:ring-new-tale h-4 w-4 text-primary border-new-tale/50 rounded text-md cursor-pointer"
-            />
-            <input
-              v-else
-              type="checkbox"
-              @click.prevent="rowCheckedAll()"
-              :checked="checkCheckedAll"
-              class="accent-teal-800 focus:ring-new-tale h-4 w-4 text-primary border-new-tale/50 rounded text-md cursor-pointer"
-            />
-          </th>
-          <th
-            class="text-xs 2xl:px-4 px-3 font-bold text-left text-black 2xl:py-5 py-3 hidden lg:table-cell tracking-wider uppercase"
-            v-for="(header, i) in headers"
-            :key="header.value"
-            :class="rowHeadStyle"
-          >
-            <span class="cursor-pointer font-body" @click="sort_by(header)">
-              {{ header.text }}
-              <Icon
-                name="bi:sort-up"
-                width="20"
-                height="20"
-                v-if="
-                  _sort[header.value] === 'asc' && header.sortable !== false
-                "
-                class="inline-block text-primary"
-              />
-              <Icon
-                name="bi:sort-down"
-                width="20"
-                height="20"
-                v-if="
-                  _sort[header.value] === 'desc' && header.sortable !== false
-                "
-                class="inline-block text-primary"
-              />
-            </span>
-          </th>
-        </tr>
-      </thead>
-      <span
-        v-if="!loading"
-        class="text-base md:text-xl xl:text-2xl 3xl:text-4xl font-light centering"
-        :class="[items.length ? 'hidden' : 'flex']"
+   <slot name="tab"></slot>
+  <div class="grid grid-cols-1">
+    <div class="h-1">
+      <ClientOnly> <h-progress v-if="loading" /></ClientOnly>
+    </div>
+    <div :class="supporterClass" class="sm:rounded-lg border-2">
+      <table
+        class="table-auto border-collapse w-full divide-y divide-secondary-4 font-body"
       >
-        No Result Found
-      </span>
-      <tbody>
-        <tr
-          :class="[
-            ' border-gray-200 rounded last:border-0 hover:bg-gray-50 cursor-pointer',
-          ]"
-          v-for="(item, idx) in items"
-          :key="item.id"
-          @click="
-            () => {
-              $emit('click:row', item);
-            }
-          "
-          class="lg:hover:bg-blue-50 flex lg:table-row flex-row flex-wrap lg:flex-no-wrap mb-0"
-        >
-          <slot name="row" :item="item" :headers="headers" :get="_get">
+        <thead class="bg-white">
+          <tr>
+            <!-- select option header -->
+            <th
+              v-if="hasCheckBox"
+              class="text-xs xl:px-6 px-4 font-bold text-left items-center text-black 2xl:py-5 py-3 table-cell tracking-wider uppercase"
+            >
+              <div class="flex gap-x-2 w-8">
+                <input
+                  v-if="checkCheckedAll"
+                  type="checkbox"
+                  @click.prevent="rowCheckedAll()"
+                  :checked="checkCheckedAll"
+                />
+                <input
+                  v-else
+                  type="checkbox"
+                  @click.prevent="rowCheckedAll()"
+                  :checked="checkCheckedAll"
+                />
+                <p v-if="checkedItems.length > 0">
+                  {{ checkedItems.length }}/{{ items.length }}
+                </p>
+                <p v-else></p>
+              </div>
+            </th>
+            <th
+              class="text-xs 2xl:px-6 px-3 font-bold text-left text-black 2xl:py-5 py-3 table-cell tracking-wider uppercase"
+              :class="header?.visibility"
+              v-for="(header, i) in headers"
+              :key="header.value"
+            >
+              <span class="cursor-pointer font-body" @click="sort_by(header)">
+                {{ header.text }}
+                <div
+                  v-if="
+                    _sort[header.value] === 'asc' && header.sortable !== false
+                  "
+                  class="h-3 w-3 inline-block text-primary"
+                />
+                <div
+                  v-if="
+                    _sort[header.value] === 'desc' && header.sortable !== false
+                  "
+                  class="h-3 w-3 inline-block text-primary"
+                />
+              </span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            :class="[
+              ' border-gray-200 rounded last:border-0  cursor-pointer lg:hover:bg-blue-50 ',
+            ]"
+            v-for="(item, index) in items"
+            :key="index"
+            @click="click_row(item, $event)"
+            class="table-row flex-no-wrap lg:shadow-none shadow mb-0"
+          >
+            <!-- check box entry for each row -->
             <td
               v-if="hasCheckBox"
-              class="w-full lg:w-auto block lg:table-cell relative lg:static border-b rounded py-4 2xl:px-4 px-2 2xl:text-sm text-xs"
-              :class="rowStyle"
+              class="w-full lg:w-auto table-cell relative lg:static border-b rounded py-4 2xl:px-6 px-2 2xl:text-sm text-xs"
             >
               <input
                 v-if="checkedItems.includes(item.id)"
                 type="checkbox"
                 :checked="checkedItems.includes(item.id)"
-                @click.stop="rowChecked(item, item.id)"
-                class="accent-teal-800 focus:ring-new-tale h-4 w-4 text-primary border-new-tale/50 rounded text-md cursor-pointer"
+                @click.stop="rowChecked(item.id)"
               />
               <input
                 v-else
                 type="checkbox"
                 :checked="checkedItems.includes(item.id)"
-                @click.stop="rowChecked(item, item.id)"
-                class="accent-accent-teal-800 focus:ring-new-tale h-4 w-4 text-new-tale border-new-tale/50 rounded text-md cursor-pointer"
+                @click.stop="rowChecked(item.id)"
               />
             </td>
-
             <td
               v-for="header in headers"
               :key="header.value"
-              :class="rowStyle"
-              class="w-full font-body lg:w-auto block lg:table-cell relative lg:static text-left text-gray-900 rounded py-4 2xl:px-4 px-2 2xl:text-sm text-xs"
+              class="w-full font-body lg:w-auto table-cell relative lg:static text-left text-gray-900 border-b rounded py-4 2xl:px-6 px-2 2xl:text-sm text-xs"
+              :class="header.visibility"
             >
-              <span
-                class="lg:hidden text-left w-1/3 align-middle inline-block text-sm font-normal text-secondary-2 font-body"
-                >{{ header.text }}
-              </span>
               <slot :item="item" :name="header.value">
                 <span
-                  class="align-middle inline-block whitespace-nowrap font-body lg:w-7/12 xl:w-9/12"
-                  v-if="header.value == 'roll_no'"
+                  :class="bodyClass"
+                  class="align-middle inline-block overflow-ellipsis overflow-hidden whitespace-nowrap font-body  "
+                  v-if="header.value == 'full_name'"
                 >
-                  {{ idx + 1 }}
-                </span>
-                <span
-                  class="align-middle inline-block overflow-ellipsis overflow-hidden whitespace-nowrap font-body lg:w-7/12 xl:w-9/12 truncate"
-                  v-else-if="header.value == 'full_name'"
-                >
-                  <!-- <PersonTypeIndicator :type="item.type" /> -->
-
                   {{ _get(item, header.value) || "-" }}
                 </span>
                 <span
+                  :class="bodyClass"
+                  class="lg:w-10/12 xl:w-11/12 align-middle inline-block overflow-ellipsis overflow-hidden whitespace-nowrap font-body "
+                  v-else-if="_get(item, header.value) == '0'"
+                >
+                  {{ _get(item, header.value) }}
+                </span>
+                <span
+                  :title="_get(item, header.value) || '-'"
+                  :class="bodyClass"
                   class="lg:w-10/12 xl:w-11/12 align-middle inline-block overflow-ellipsis overflow-hidden whitespace-nowrap font-body truncate"
                   v-else
                 >
@@ -284,17 +287,11 @@ function rowCheckedAll() {
                 </span>
               </slot>
             </td>
-          </slot>
-        </tr>
-      </tbody>
-    </table>
+          </tr>
+
+       
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
-<style scoped>
-.centering {
-  position: absolute;
-  bottom: -1%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-</style>

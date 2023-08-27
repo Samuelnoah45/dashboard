@@ -308,7 +308,7 @@ const links = ref([
 
   <!-- ###### section four ####### -->
   <div
-    class="md:min-h-screen font-poppins w-full relative dark:bg-dark-secondary bg-[#FFF9ED] md:px-20 px-2 md:mb-0 pb-10"
+    class="md:min-h-screen font-poppins w-full relative dark:bg-dark-secondary bg-[#FFF9ED] md:px-10 px-2 md:mb-0 pb-10"
   >
     <LayoutSectionHeader
       iconName="uil:shop"
@@ -321,7 +321,7 @@ const links = ref([
 
   <!--  section five  -->
   <div
-    class="md:min-h-screen font-poppins w-full relative md:px-20 dark:bg-dark-primary"
+    class="md:min-h-screen font-poppins w-full relative md:px-10 dark:bg-dark-primary"
   >
     <LayoutSectionHeader
       iconName="bi:person-check"
@@ -336,7 +336,7 @@ const links = ref([
   </div>
   <!--  section six  -->
   <div
-    class="md:min-h-screen font-poppins w-full relative md:px-20 px-4 bg-[#FFF9ED] dark:bg-dark-secondary"
+    class="md:min-h-screen font-poppins w-full relative md:px-10 px-4 bg-[#FFF9ED] dark:bg-dark-secondary"
   >
     <LayoutSectionHeader
       iconName="mdi:partnership-outline"
@@ -405,7 +405,7 @@ const links = ref([
       subtitle="Contact"
     ></LayoutSectionHeader>
 
-    <div class="w-full h-[60%] flex justify-center md:px-20 p-4">
+    <div class="w-full h-[60%] flex justify-center md:px-10 p-4">
       <div class="flex justify-center md:w-[80%]">
         <HomeContact></HomeContact>
       </div>
