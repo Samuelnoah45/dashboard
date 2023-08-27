@@ -91,4 +91,7 @@ definePageMeta({
 .ql-container {
   @apply h-[50vh];
 }
+.ql-toolbar {
+  @apply bg-primary;
+}
 </style>

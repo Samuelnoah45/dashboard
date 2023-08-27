@@ -2,8 +2,8 @@
 <template>
   <div class="h-screen">
     <NavBar dashboard-name="Events" />
-    <div class="h-[81vh] grid grid-cols-12 w-full">
-      <div class="col-span-2 pt-20 border-primary border-r">
+    <div class="md:h-[81vh] grid md:grid-cols-12 w-full">
+      <div class="col-span-2 pt-20 hidden md:inline-block border-primary border-r">
         <div class="space-y-10">
           <div>
             <NuxtLink to="/content" class="">

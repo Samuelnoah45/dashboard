@@ -24,65 +24,71 @@ definePageMeta({
 });
 </script>
 <template>
-  <div class="flex md:px-[100px] px-4">
-    <TabGroup as="div" class="w-md:[100%] flex flex-col">
-      <TabList class="flex w-full border-b">
-        <div class="flex md:w-[24%] space-x-6 w-full">
-          <Tab as="template" v-slot="{ selected }" class="md:w-1/3"
-            ><div class="flex cursor-pointer items-center">
-              <div
-                class="font-semibold flex justify-center items-center space-x-2"
-                :class="
-                  selected
-                    ? ' border-primary border-b-2 text-primary py-2'
-                    : 'text-primary-text-light   dark:text-dark-text-secondary'
-                "
-              >
-                <Icon name="lucide:image" class="text-2xl mb-1"></Icon>
+  <TabGroup as="div" class="w-md:[100%] px-20 space-y-4 flex flex-col">
+    <TabList class="flex w-full border-b">
+      <div class="flex md:w-[20%] justify-between space-x-6 w-full">
+        <Tab as="template" v-slot="{ selected }" class="md:w-1/3"
+          ><div class="flex cursor-pointer items-center">
+            <div
+              class="font-semibold flex justify-center items-center space-x-2"
+              :class="
+                selected
+                  ? '  border-primary border-b-2 text-primary py-2'
+                  : 'text-primary-text-light   dark:text-dark-text-secondary'
+              "
+            >
+              <Icon name="ri:image-fill" class="text-2xl mb-1"></Icon>
 
-                <p>Images</p>
-              </div>
-            </div>
-          </Tab>
-          <Tab as="template" v-slot="{ selected }" class="md:w-1/3"
-            ><div class="flex cursor-pointer justify-center items-center">
-              <div
-                class="font-semibold flex justify-center items-center space-x-2"
-                :class="
-                  selected
-                    ? ' border-primary border-b-2 text-primary py-2'
-                    : 'text-primary-text-light   dark:text-dark-text-secondary'
-                "
-              >
-                <Icon name="lucide:video" class="text-2xl mb-1"></Icon>
-                <p>Videos</p>
-              </div>
-            </div>
-          </Tab>
-        </div>
-      </TabList>
-      <TabPanels>
-        <TabPanel class="w-full">
-          <div class="flex h-[72vh]">
-            <div class="grid md:grid-cols-4 gap-10 py-10">
-              <div v-for="(image, i) in gallery" class="rounded-lg flex">
-                <NuxtLink class="" to="/communications/1">
-                  <div class="space-y-4 rounded-lg overflow-hidden">
-                    <div class="h-[200px] md:w-[300px] max-w-full relative">
-                      <img
-                        :src="image"
-                        alt=""
-                        class="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                </NuxtLink>
-              </div>
-
-              <!-- card two -->
+              <p>Image</p>
             </div>
           </div>
-          <!-- </div> -->
+        </Tab>
+        <Tab as="template" v-slot="{ selected }" class=""
+          ><div class="flex cursor-pointer items-center">
+            <div
+              class="font-semibold flex justify-center items-center space-x-2"
+              :class="
+                selected
+                  ? '  border-primary border-b-2 text-primary py-2'
+                  : 'text-primary-text-light'
+              "
+            >
+              <Icon name="tabler:video" class="text-3xl mb-1"></Icon>
+
+              <p>Video</p>
+            </div>
+          </div>
+        </Tab>
+      </div>
+    </TabList>
+    <TabPanels>
+      <TabPanel class="w-full space-y-4">
+        <div class="flex justify-between">
+          <p class="text-xl font-medium">Images</p>
+
+          <button
+            class="flex justify-center items-center space-x-2 p-2 bg-primary text-white font-semibold rounded-md"
+          >
+            <Icon name="gridicons:add-image" class="text-2xl"></Icon>
+            <p>Add image</p>
+          </button>
+        </div>
+        <div class="h-[68vh] px-2 overflow-y-scroll space-y-4">
+          <div class="grid grid-cols-4 gap-20">
+            <div v-for="(image, i) in gallery" class="rounded-lg flex">
+              <NuxtLink class="" to="/communications/1">
+                <div class="space-y-4 rounded-lg overflow-hidden">
+                  <div class="h-[200px] md:w-[300px] max-w-full relative">
+                    <img
+                      :src="image"
+                      alt=""
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </NuxtLink>
+            </div>
+          </div>
           <vue-awesome-paginate
             :total-items="50"
             :items-per-page="5"
@@ -105,62 +111,72 @@ definePageMeta({
               </div>
             </template>
           </vue-awesome-paginate>
-        </TabPanel>
-        <TabPanel class="w-full">
-          <!-- <div class="md:w-[70%] bg-black w-full grid md:grid-cols-2  grid-cols-1 md:gap-16 gap-4"> -->
-          <!-- card one -->
-          <div class="flex h-[72vh]">
-            <div class="grid md:grid-cols-4 gap-10 py-10">
-              <div v-for="(image, i) in gallery" class="rounded-lg flex">
-                <NuxtLink class="" to="/communications/1">
-                  <div class="space-y-4 rounded-lg overflow-hidden">
-                    <div class="h-[200px] md:w-[300px] max-w-full relative">
-                      <Icon
-                        name="carbon:play-filled"
-                        class="absolute z-50 top-[45%] left-[45%] text-[#E71D37] text-[90px]"
-                      ></Icon>
-                      <img
-                        :src="image"
-                        alt=""
-                        class="w-full h-full object-cover"
-                        :class="i % 3 == 0 ? 'blur-sm' : 'blur-sm'"
-                      />
-                    </div>
+        </div>
+      </TabPanel>
+
+      <TabPanel class="w-full space-y-4">
+        <div class="flex justify-between">
+          <p class="text-xl font-medium">Videos</p>
+          <button
+            class="flex justify-center items-center space-x-2 p-2 bg-primary text-white font-semibold rounded-md"
+          >
+            <Icon
+              name="ant-design:video-camera-add-outlined"
+              class="text-2xl"
+            ></Icon>
+            <p>Add Video</p>
+          </button>
+        </div>
+        <div class="h-[68vh] px-2 overflow-y-scroll space-y-4">
+          <div class="grid grid-cols-4 gap-20">
+            <div v-for="(image, i) in gallery" class="rounded-lg flex">
+              <NuxtLink class="" to="/communications/1">
+                <div class="space-y-4 rounded-lg overflow-hidden">
+                  <div class="h-[200px] md:w-[300px] max-w-full relative">
+                    <Icon
+                      v-if="0 == 0"
+                      name="carbon:play-filled"
+                      class="absolute z-50 top-[30%] left-[30%] text-[#E71D37] text-[90px]"
+                    ></Icon>
+                    <img
+                      :src="image"
+                      alt=""
+                      class="w-full h-full object-cover"
+                      :class="true ? 'blur-sm' : ''"
+                    />
                   </div>
-                </NuxtLink>
-              </div>
+                </div>
+              </NuxtLink>
             </div>
           </div>
-          <div class="px-4">
-            <vue-awesome-paginate
-              :total-items="50"
-              :items-per-page="5"
-              :max-pages-shown="3"
-              v-model="currentPage"
-              :hidePrevNextWhenEnds="true"
-              :on-click="onClickHandler"
-              class="w-full flex justify-center relative"
-            >
-              <template #prev-button>
-                <div class="flex absolute left-0 items-center space-x-2 top-2">
-                  <Icon name="mingcute:arrow-left-line"></Icon>
-                  <p>Previous</p>
-                </div>
-              </template>
-              <template #next-button>
-                <div class="flex absolute right-0 items-center space-x-2 top-2">
-                  <p>Next</p>
-                  <Icon name="mingcute:arrow-right-line"></Icon>
-                </div>
-              </template>
-            </vue-awesome-paginate>
-          </div>
-        </TabPanel>
-      </TabPanels>
-    </TabGroup>
-  </div>
+          <vue-awesome-paginate
+            :total-items="50"
+            :items-per-page="5"
+            :max-pages-shown="3"
+            v-model="currentPage"
+            :hidePrevNextWhenEnds="true"
+            :on-click="onClickHandler"
+            class="w-full flex justify-center relative"
+          >
+            <template #prev-button>
+              <div class="flex absolute left-0 items-center space-x-2 top-2">
+                <Icon name="mingcute:arrow-left-line"></Icon>
+                <p>Previous</p>
+              </div>
+            </template>
+            <template #next-button>
+              <div class="flex absolute right-0 items-center space-x-2 top-2">
+                <p>Next</p>
+                <Icon name="mingcute:arrow-right-line"></Icon>
+              </div>
+            </template>
+          </vue-awesome-paginate>
+        </div>
+      </TabPanel>
+    </TabPanels>
+  </TabGroup>
 </template>
-<style>
+<style scoped>
 .pagination-container {
   @apply flex space-x-4 border-t-2;
 }
@@ -170,5 +186,27 @@ definePageMeta({
 
 .active-page {
   @apply border-t-2 border-primary;
+}
+::-webkit-scrollbar {
+  width: 1px;
+  height: 4px;
+  display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-primary;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c3ddfd;
+  border-radius: 3px;
+  @apply bg-primary;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #c3ddfd;
 }
 </style>

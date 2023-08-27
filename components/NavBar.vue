@@ -44,19 +44,19 @@ const NavBars = ref([
 
 <template>
   <div class="grid grid-cols-12">
-    <div class="flex w-full col-span-2  items-center " :class="route.path !='/' ?'border-r border-primary':''">
+    <div class="flex w-full lg:col-span-2  col-span-3 items-center " :class="route.path !='/' ?'lg:border-r border-primary':''">
       <NuxtLink  to="/">
       <img
         type="image"
         src="@/assets/images/logos/EYEA_logos/EYEA_logo_color.svg"
         alt=""
-        class="w-[170px]"
+        class="w-[200px]"
       />
       </NuxtLink>
     </div>
-    <div class="col-span-10 flex justify-between px-20 items-center">
-      <div class="text-3xl font-medium  text-primary capitalize ">{{ name(route.path)}}</div>
-      <div class="flex items-center space-x-4">
+    <div class="lg:col-span-10 col-span-9 flex justify-between lg:px-20 items-center">
+      <div class="lg:text-3xl font-medium   text-primary capitalize ">{{ name(route.path)}}</div>
+      <div class="flex items-center flex-none lg:space-x-4 space-x-2">
         <Icon name="fluent:mail-multiple-16-regular" class="text-2xl font-semibold"></Icon>
         <Icon name="clarity:notification-line" class="text-2xl font-semibold"></Icon>
         <Menu as="div" class="relative inline-block text-left space-x-1">
@@ -66,7 +66,7 @@ const NavBars = ref([
             >
               <img src="@/assets/images/temp/smallCard3.png" alt="" />
             </div>
-            <div class="flex items-center space-x-2 px-2">
+            <div class="lg:flex  hidden items-center space-x-2 px-2">
                <p>Samuel Noah</p>
               <Icon
                 :name="isMenuOpen ? 'ep:arrow-down-bold' : 'ep:arrow-down-bold'"
@@ -82,7 +82,7 @@ const NavBars = ref([
             leave-from-class="transform scale-100 opacity-100"
             leave-to-class="transform scale-95 opacity-0"
           >
-            <MenuItems class="absolute  bg-[#EEF0F3]    w-full  right-0">
+            <MenuItems class="absolute  bg-[#EEF0F3]  min-w-[100px]   w-full  right-4">
               <div class="flex flex-col">
                 <MenuItem class="hover:text-primary border px-2" v-slot="{ active }">
                   <NuxtLink to="/">Text</NuxtLink>

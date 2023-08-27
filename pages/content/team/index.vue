@@ -5,10 +5,10 @@ definePageMeta({
 });
 </script>
 <template>
-  <TabGroup as="div" class="w-md:[100%] px-20 space-y-4 flex flex-col">
+  <TabGroup as="div" class="w-md:[100%] lg:px-20 px-2 space-y-4 flex flex-col">
     <TabList class="flex w-full border-b">
-      <div class="flex md:w-[45%] justify-between space-x-6 w-full">
-        <Tab as="template" v-slot="{ selected }" class="md:w-1/3"
+      <div class="flex lg:w-[45%] justify-between w-full">
+        <Tab as="template" v-slot="{ selected }" class=""
           ><div class="flex cursor-pointer items-center">
             <div
               class="font-semibold flex justify-center items-center space-x-2"
@@ -18,7 +18,7 @@ definePageMeta({
                   : 'text-primary-text-light   dark:text-dark-text-secondary'
               "
             >
-              <Icon name="tabler:news" class="text-2xl mb-1"></Icon>
+              <Icon name="tabler:news" class="lg:text-2xl mb-1"></Icon>
 
               <p>Board of Directors</p>
             </div>
@@ -43,7 +43,7 @@ definePageMeta({
             </div>
           </div>
         </Tab>
-        <Tab as="template" v-slot="{ selected }" class="md:w-1/3"
+        <Tab as="template" v-slot="{ selected }" class=""
           ><div class="flex cursor-pointer justify-center items-center">
             <div
               class="font-semibold flex justify-center items-center space-x-2"
@@ -62,66 +62,78 @@ definePageMeta({
     </TabList>
     <TabPanels>
       <TabPanel class="w-full space-y-4">
-        <div class="flex justify-between">
-          <InputsTextfield name="search" class="pl-10">
-            <template #leading>
-              <Icon
-                name="gala:search"
-                class="text-gray-500 -rotate-90 absolute top-2 text-2xl left-2"
-              ></Icon>
-            </template>
-          </InputsTextfield>
+        <div class="flex items-end justify-between">
+          <div class="w-1/2 lg:w-auto h-10">
+            <InputsTextfield name="search" class="pl-10">
+              <template #leading>
+                <Icon
+                  name="gala:search"
+                  class="text-gray-500 -rotate-90 absolute top-2 text-2xl left-2"
+                ></Icon>
+              </template>
+            </InputsTextfield>
+          </div>
           <button
             class="flex justify-center items-center space-x-2 p-2 bg-primary text-white font-semibold rounded-md"
           >
-            <Icon name="circum:edit" class="text-2xl"></Icon>
+            <Icon name="solar:pen-2-linear"></Icon>
             <p>Board of Directors</p>
           </button>
         </div>
-        <div class="grid grid-cols-4 gap-20 h-[68vh] px-2 overflow-y-scroll">
+        <div
+          class="grid lg:grid-cols-4 gap-20 lg:h-[68vh] px-2 overflow-y-scroll"
+        >
           <PeronsInfo v-for="i in 16"></PeronsInfo>
         </div>
       </TabPanel>
       <TabPanel class="w-full space-y-4">
-        <div class="flex justify-between">
-          <InputsTextfield name="search" class="pl-10">
-            <template #leading>
-              <Icon
-                name="gala:search"
-                class="text-gray-500 -rotate-90 absolute top-2 text-2xl left-2"
-              ></Icon>
-            </template>
-          </InputsTextfield>
+        <div class="flex items-end justify-between">
+          <div class="w-1/2 lg:w-auto h-10">
+            <InputsTextfield name="search" class="pl-10">
+              <template #leading>
+                <Icon
+                  name="gala:search"
+                  class="text-gray-500 -rotate-90 absolute top-2 text-2xl left-2"
+                ></Icon>
+              </template>
+            </InputsTextfield>
+          </div>
           <button
             class="flex justify-center items-center space-x-2 p-2 bg-primary text-white font-semibold rounded-md"
           >
-            <Icon name="circum:edit" class="text-2xl"></Icon>
+            <Icon name="solar:pen-2-linear"></Icon>
             <p>Advisor</p>
           </button>
         </div>
-        <div class="grid grid-cols-4 gap-20 h-[68vh] px-2 overflow-y-scroll">
+        <div
+          class="grid lg:grid-cols-4 gap-20 lg:h-[68vh] px-2 overflow-y-scroll"
+        >
           <PeronsInfo v-for="i in 16"></PeronsInfo>
         </div>
       </TabPanel>
 
       <TabPanel class="w-full space-y-4">
-        <div class="flex justify-between">
-          <InputsTextfield name="search" class="pl-10">
-            <template #leading>
-              <Icon
-                name="gala:search"
-                class="text-gray-500 -rotate-90 absolute top-2 text-2xl left-2"
-              ></Icon>
-            </template>
-          </InputsTextfield>
+        <div class="flex items-end justify-between">
+          <div class="w-1/2 lg:w-auto h-10">
+            <InputsTextfield name="search" class="pl-10">
+              <template #leading>
+                <Icon
+                  name="gala:search"
+                  class="text-gray-500 -rotate-90 absolute top-2 text-2xl left-2"
+                ></Icon>
+              </template>
+            </InputsTextfield>
+          </div>
           <button
             class="flex justify-center items-center space-x-2 p-2 bg-primary text-white font-semibold rounded-md"
           >
-            <Icon name="circum:edit" class="text-2xl"></Icon>
-            <p>New Team Member</p>
+            <Icon name="solar:pen-2-linear"></Icon>
+            <p>Team Member </p>
           </button>
         </div>
-        <div class="grid grid-cols-4 gap-20 h-[68vh] px-2 overflow-y-scroll">
+        <div
+          class="grid lg:grid-cols-4 gap-20 lg:h-[68vh] px-2 overflow-y-scroll"
+        >
           <PeronsInfo v-for="i in 16"></PeronsInfo>
         </div>
       </TabPanel>
@@ -153,6 +165,6 @@ definePageMeta({
   background: #c3ddfd;
 }
 .ql-container {
-  @apply h-[50vh];
+  @apply lg:h-[50vh];
 }
 </style>
