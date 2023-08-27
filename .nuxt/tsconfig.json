@@ -9,7 +9,7 @@
     "skipLibCheck": true,
     "strict": true,
     "allowJs": true,
-    "baseUrl": "/home/sky/eyea-web-client",
+    "baseUrl": "C:/Users/VICTUS/Documents/sami/dashboard",
     "noEmit": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
@@ -18,79 +18,79 @@
     ],
     "paths": {
       "~": [
-        "/home/sky/eyea-web-client"
+        "C:/Users/VICTUS/Documents/sami/dashboard"
       ],
       "~/*": [
-        "/home/sky/eyea-web-client/*"
+        "C:/Users/VICTUS/Documents/sami/dashboard/*"
       ],
       "@": [
-        "/home/sky/eyea-web-client"
+        "C:/Users/VICTUS/Documents/sami/dashboard"
       ],
       "@/*": [
-        "/home/sky/eyea-web-client/*"
+        "C:/Users/VICTUS/Documents/sami/dashboard/*"
       ],
       "~~": [
-        "/home/sky/eyea-web-client"
+        "C:/Users/VICTUS/Documents/sami/dashboard"
       ],
       "~~/*": [
-        "/home/sky/eyea-web-client/*"
+        "C:/Users/VICTUS/Documents/sami/dashboard/*"
       ],
       "@@": [
-        "/home/sky/eyea-web-client"
+        "C:/Users/VICTUS/Documents/sami/dashboard"
       ],
       "@@/*": [
-        "/home/sky/eyea-web-client/*"
+        "C:/Users/VICTUS/Documents/sami/dashboard/*"
       ],
       "assets": [
-        "/home/sky/eyea-web-client/assets"
+        "C:/Users/VICTUS/Documents/sami/dashboard/assets"
       ],
       "assets/*": [
-        "/home/sky/eyea-web-client/assets/*"
+        "C:/Users/VICTUS/Documents/sami/dashboard/assets/*"
       ],
       "public": [
-        "/home/sky/eyea-web-client/public"
+        "C:/Users/VICTUS/Documents/sami/dashboard/public"
       ],
       "public/*": [
-        "/home/sky/eyea-web-client/public/*"
+        "C:/Users/VICTUS/Documents/sami/dashboard/public/*"
       ],
       "#app": [
-        "/home/sky/eyea-web-client/node_modules/nuxt/dist/app"
+        "C:/Users/VICTUS/Documents/sami/dashboard/node_modules/nuxt/dist/app"
       ],
       "#app/*": [
-        "/home/sky/eyea-web-client/node_modules/nuxt/dist/app/*"
+        "C:/Users/VICTUS/Documents/sami/dashboard/node_modules/nuxt/dist/app/*"
       ],
       "vue-demi": [
-        "/home/sky/eyea-web-client/node_modules/nuxt/dist/app/compat/vue-demi"
+        "C:/Users/VICTUS/Documents/sami/dashboard/node_modules/nuxt/dist/app/compat/vue-demi"
       ],
       "pinia": [
-        "/home/sky/eyea-web-client/node_modules/pinia/dist/pinia"
+        "C:/Users/VICTUS/Documents/sami/dashboard/node_modules/pinia/dist/pinia"
       ],
       "#image": [
-        "/home/sky/eyea-web-client/node_modules/@nuxt/image/dist/runtime"
+        "C:/Users/VICTUS/Documents/sami/dashboard/node_modules/@nuxt/image/dist/runtime"
       ],
       "#image/*": [
-        "/home/sky/eyea-web-client/node_modules/@nuxt/image/dist/runtime/*"
+        "C:/Users/VICTUS/Documents/sami/dashboard/node_modules/@nuxt/image/dist/runtime/*"
       ],
       "#apollo": [
-        "/home/sky/eyea-web-client/.nuxt/apollo"
+        "C:/Users/VICTUS/Documents/sami/dashboard/.nuxt/apollo"
       ],
       "#color-mode-options": [
-        "/home/sky/eyea-web-client/.nuxt/color-mode-options"
+        "C:/Users/VICTUS/Documents/sami/dashboard/.nuxt/color-mode-options"
       ],
       "#vue-router": [
-        "/home/sky/eyea-web-client/.nuxt/vue-router"
+        "C:/Users/VICTUS/Documents/sami/dashboard/.nuxt/vue-router"
       ],
       "#imports": [
-        "/home/sky/eyea-web-client/.nuxt/imports"
+        "C:/Users/VICTUS/Documents/sami/dashboard/.nuxt/imports"
       ],
       "#build": [
-        "/home/sky/eyea-web-client/.nuxt"
+        "C:/Users/VICTUS/Documents/sami/dashboard/.nuxt"
       ],
       "#build/*": [
-        "/home/sky/eyea-web-client/.nuxt/*"
+        "C:/Users/VICTUS/Documents/sami/dashboard/.nuxt/*"
       ],
       "#components": [
-        "/home/sky/eyea-web-client/.nuxt/components"
+        "C:/Users/VICTUS/Documents/sami/dashboard/.nuxt/components"
       ]
     }
   },
@@ -98,14 +98,14 @@
     "./nuxt.d.ts",
     "../**/*",
     "../**/*",
-    "/home/sky/eyea-web-client",
-    "/home/sky/eyea-web-client/*",
-    "/home/sky/eyea-web-client",
-    "/home/sky/eyea-web-client/*",
-    "/home/sky/eyea-web-client",
-    "/home/sky/eyea-web-client/*",
-    "/home/sky/eyea-web-client",
-    "/home/sky/eyea-web-client/*"
+    "C:/Users/VICTUS/Documents/sami/dashboard",
+    "C:/Users/VICTUS/Documents/sami/dashboard/*",
+    "C:/Users/VICTUS/Documents/sami/dashboard",
+    "C:/Users/VICTUS/Documents/sami/dashboard/*",
+    "C:/Users/VICTUS/Documents/sami/dashboard",
+    "C:/Users/VICTUS/Documents/sami/dashboard/*",
+    "C:/Users/VICTUS/Documents/sami/dashboard",
+    "C:/Users/VICTUS/Documents/sami/dashboard/*"
   ],
   "exclude": [
     "../dist",

@@ -1,9 +1,9 @@
 <script setup></script>
 <template>
-  <div class="h-screen">
-    <NavBar  dashboard-name="Events"/>
-    <div class="h-[81vh] grid grid-cols-12 w-full">
-      <div class="col-span-2 pt-20 border-primary border-r">
+  <div class="h-screen xl:overflow-hidden">
+    <NavBar dashboard-name="Events" />
+    <div class="xl:h-[81vh] grid lg:grid-cols-12 grid-cols-10 w-full">
+      <div class="col-span-2 pt-20 border-primary border-r hidden lg:block">
         <div class="space-y-10">
           <div>
             <NuxtLink to="/events" class="">
@@ -24,7 +24,7 @@
           </div>
           <div>
             <NuxtLink to="/events/zelela" class="">
-              <div class="flex space-x-2 pl-12  blackIcon  items-center">
+              <div class="flex space-x-2 pl-12 blackIcon items-center">
                 <p>
                   <img
                     src="@/assets/images/logos/zelela_icon_black.png"
@@ -57,7 +57,7 @@
     </div>
     <div>
       <div
-        class="flex justify-center space-x-2 w-full bg-primary p-2 pt-6 text-black"
+        class="xl:fixed bottom-0 left-0 z-50 flex justify-center space-x-2 w-full bg-primary p-2 text-black"
       >
         <p>© 2023 EYEA. All rights reserved.</p>
         <div class="flex space-x-2">
