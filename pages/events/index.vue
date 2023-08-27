@@ -53,15 +53,11 @@ definePageMeta({
 });
 </script>
 <template>
-  <div
-    class="grid xl:grid-cols-12 grid-cols-9 lg:px-10 px-5 font-poppins gap-10"
-  >
-    <div class="col-span-9 space-y-8">
-      <div class="grid sm:grid-cols-2 grid-cols-1 gap-2">
-        <div
-          class="relative grid grid-cols-12 lg:text-4xl text-2xl border-2 rounded-lg"
-        >
-          <div class="sm:space-y-4 space-y-2 col-span-6 px-8 sm:py-3 py-2">
+  <div class="grid grid-cols-12 px-10 font-poppins">
+    <div class="col-span-9">
+      <div class="grid grid-cols-2 gap-4">
+        <div class="grid grid-cols-2 text-4xl border-2 p-4 rounded-lg">
+          <div class="space-y-4">
             <p class="text-base text-third">Booked</p>
             <p class="font-semibold">37321</p>
           </div>

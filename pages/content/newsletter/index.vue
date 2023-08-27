@@ -6,7 +6,7 @@ definePageMeta({
 });
 </script>
 <template>
-  <div class="px-20">
+  <div class="px-10">
     <div class="flex justify-between">
       <InputsTextfield name="search" class="pl-10">
         <template #leading>
@@ -23,7 +23,7 @@ definePageMeta({
         <p>write article</p>
       </button>
     </div>
-    <div class="grid grid-cols-12 h-[74vh] py-10">
+    <div class="grid grid-cols-12 h-[80vh] py-10">
       <div class="col-span-4 flex-col overflow-y-scroll space-y-4 h-full flex">
         <div v-for="i in 10" class="w-[90%] space-y-4 rounded-lg border-2 p-4">
           <p class="text-2xl font-semibold">Lorem, ipsum dolor.</p>

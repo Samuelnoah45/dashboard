@@ -7,10 +7,10 @@ definePageMeta({
 });
 </script>
 <template>
-  <TabGroup as="div" class="w-md:[100%] lg:px-20 px-4 space-y-4 flex flex-col">
+  <TabGroup as="div" class=" lg:px-10 px-4   space-y-4 flex flex-col">
     <TabList class="flex w-full border-b">
       <div class="flex md:w-[45%] md:space-x-6 justify-between text-sm w-full">
-        <Tab as="template" v-slot="{ selected }" class="md:w-1/3"
+        <Tab as="template" v-slot="{ selected }" class=""
           ><div class="flex cursor-pointer items-center">
             <div
               class="font-semibold flex justify-center items-center space-x-2"
@@ -161,7 +161,7 @@ definePageMeta({
           </button>
         </div>
         <div
-          class="grid lg:grid-cols-3 lg:gap-20 lg:h-[68vh] space-y-2 px-2 overflow-y-scroll"
+          class="grid lg:grid-cols-3 lg:gap-5 lg:h-[68vh] space-y-2 px-2 overflow-y-scroll"
         >
           <div v-for="i in 10" class="rounded-lg border-2 space-y-4 p-4">
             <div class="w-[218px] h-[205px]">
@@ -179,16 +179,16 @@ definePageMeta({
               <button class="flex items-center border rounded-md p-2 space-x-2">
                 <Icon
                   name="bytesize:download"
-                  class="lg:text-2xl text-base"
+                  class=" text-base"
                 ></Icon>
                 <p>Download</p>
               </button>
               <button class="flex items-center border rounded-md p-2 space-x-2">
-                <Icon name="tabler:reload" class="lg:text-2xl text-base"></Icon>
+                <Icon name="tabler:reload" class="l text-base"></Icon>
                 <p>Update</p>
               </button>
               <button class="flex items-center border rounded-md p-2 space-x-2">
-                <Icon name="mi:delete" class="lg:text-2xl text-base"></Icon>
+                <Icon name="mi:delete" class="text-base"></Icon>
                 <p>Delete</p>
               </button>
             </div>

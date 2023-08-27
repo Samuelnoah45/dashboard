@@ -78,7 +78,7 @@ const partners = ref([
       </div>
     </div>
     <div
-      class="md:min-h-[60vh] font-poppins bg-[#B5B5B53B] dark:bg-dark-primary w-full relative md:px-20 md:pt-20"
+      class="md:min-h-[60vh] font-poppins bg-[#B5B5B53B] dark:bg-dark-primary w-full relative md:px-10 md:pt-20"
     >
       <LayoutSectionHeader
         titleClass="md:text-4xl text-xl text-primary-text"
@@ -158,7 +158,7 @@ const partners = ref([
         </div>
       </div>
     </div>
-    <div class="pb-10 bg-third-light font-poppins w-full relative md:px-20 dark:bg-dark-secondary">
+    <div class="pb-10 bg-third-light font-poppins w-full relative md:px-10 dark:bg-dark-secondary">
       <div class="absolute hidden md:inline-block right-0 bottom-4">
         <NuxtImg
           format="webp"

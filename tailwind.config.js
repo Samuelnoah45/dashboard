@@ -43,6 +43,10 @@ module.exports = {
       // => @media (min-width: 1920px) { ... }
     },
     extend: {
+      gridTemplateColumns: {
+        13: "repeat(13, minmax(0, 1fr))",
+      },
+      
       fontFamily: {
         poppins: ['"Poppins"', "sans-serif"],
       },

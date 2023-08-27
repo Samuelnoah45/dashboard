@@ -5,7 +5,7 @@ definePageMeta({
 });
 </script>
 <template>
-  <TabGroup as="div" class="w-md:[100%] lg:px-20 px-2 space-y-4 flex flex-col">
+  <TabGroup as="div" class="w-md:[100%] lg:px-10 px-2 space-y-4 flex flex-col">
     <TabList class="flex w-full border-b">
       <div class="flex lg:w-[45%] justify-between w-full">
         <Tab as="template" v-slot="{ selected }" class=""
@@ -81,7 +81,7 @@ definePageMeta({
           </button>
         </div>
         <div
-          class="grid lg:grid-cols-4 gap-20 lg:h-[68vh] px-2 overflow-y-scroll"
+          class="grid lg:grid-cols-4 gap-5 lg:h-[68vh]  overflow-y-scroll"
         >
           <PeronsInfo v-for="i in 16"></PeronsInfo>
         </div>
@@ -106,7 +106,7 @@ definePageMeta({
           </button>
         </div>
         <div
-          class="grid lg:grid-cols-4 gap-20 lg:h-[68vh] px-2 overflow-y-scroll"
+          class="grid lg:grid-cols-4 gap-5 lg:h-[68vh]  overflow-y-scroll"
         >
           <PeronsInfo v-for="i in 16"></PeronsInfo>
         </div>
@@ -132,7 +132,7 @@ definePageMeta({
           </button>
         </div>
         <div
-          class="grid lg:grid-cols-4 gap-20 lg:h-[68vh] px-2 overflow-y-scroll"
+          class="grid lg:grid-cols-4 gap-5 lg:h-[68vh]  overflow-y-scroll"
         >
           <PeronsInfo v-for="i in 16"></PeronsInfo>
         </div>

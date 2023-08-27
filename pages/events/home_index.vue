@@ -114,7 +114,7 @@ const partnered = ref([
       </div>
     </div>
 
-    <div class="pb-10 font-poppins w-full relative md:px-20 dark:bg-dark-secondary">
+    <div class="pb-10 font-poppins w-full relative md:px-10 dark:bg-dark-secondary">
       <LayoutSectionHeader
         titleClass="text-primary-text text-4xl"
         subtitle-class="text-primary-text-light"

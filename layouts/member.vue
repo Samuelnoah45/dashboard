@@ -1,9 +1,18 @@
 <script setup></script>
 <template>
-  <div class="h-screen">
-    <NavBar  dashboard-name="Events"/>
-    <div class="h-[81vh] grid grid-cols-12 w-full">
-      <div class="col-span-2 pt-20 border-primary border-r">
+  <div class="h-[96vh] font-poppins  flex">
+  
+      <div class="col-span-3  py-10 space-y-20 min-w-[296px] 3xl:min-w-[350px] border-primary border-r">
+          <div class="flex justify-center">
+            <NuxtLink to="/">
+            <img
+              type="image "
+              src="@/assets/images/logos/EYEA_logos/final_logo.svg"
+              alt=""
+              class="w-[175px]"
+            />
+          </NuxtLink>
+          </div>
         <div class="space-y-10">
           <div>
             <NuxtLink to="/member" class="">
@@ -22,7 +31,7 @@
               </div>
             </NuxtLink>
           </div>
-         
+
           <div>
             <NuxtLink to="/member/setting" class="">
               <div class="flex space-x-2 pl-12 items-center">
@@ -33,13 +42,15 @@
           </div>
         </div>
       </div>
-      <div class="col-span-10">
+      <div class="flex-grow ">
+        <NavBar dashboard-name="Events" />
+
         <slot></slot>
       </div>
     </div>
     <div>
       <div
-        class="flex justify-center space-x-2 w-full bg-primary p-2 pt-6 text-black"
+        class="flex  justify-center space-x-2 w-full bg-primary p-2  text-black"
       >
         <p>© 2023 EYEA. All rights reserved.</p>
         <div class="flex space-x-2">
@@ -48,7 +59,6 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 <style>
 .router-link-active div {
