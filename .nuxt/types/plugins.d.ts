@@ -20,6 +20,7 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../node_modules/@nuxt/content/dist/runtime/plugins/ws").default> &
   InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/chunk-reload.client").default> &
   InjectionType<typeof import("../../node_modules/@pinia-plugin-persistedstate/nuxt/dist/runtime/plugin").default> &
+  InjectionType<typeof import("../../plugins/apexchart").default> &
   InjectionType<typeof import("../../plugins/apolloError").default> &
   InjectionType<typeof import("../../plugins/rules").default> &
   InjectionType<typeof import("../../plugins/visible").default> &
