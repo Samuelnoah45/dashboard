@@ -503,7 +503,7 @@ function createImage(file) {
     <div v-else class="flex flex-col w-full justify-center items-center">
       <Icon name="radix-icons:image" width="50" height="50" />
       <p class="px-5 w-full lg:w-1/2 text-center text-new-tale pt-3">
-        {{ "File Upload"}}
+        {{ "File Upload" }}
       </p>
     </div>
   </div>

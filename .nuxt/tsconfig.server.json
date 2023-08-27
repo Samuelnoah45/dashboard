@@ -12,69 +12,69 @@
     "jsxFragmentFactory": "Fragment",
     "paths": {
       "#imports": [
-        "/home/sky/eyea-web-client/.nuxt/types/nitro-imports"
+        "C:/Users/VICTUS/Documents/sami/dashboard/.nuxt/types/nitro-imports"
       ],
       "#paths": [
-        "/home/sky/eyea-web-client/node_modules/nuxt/dist/core/runtime/nitro/paths"
+        "C:/Users/VICTUS/Documents/sami/dashboard/node_modules/nuxt/dist/core/runtime/nitro/paths"
       ],
       "~": [
-        "/home/sky/eyea-web-client"
+        "C:/Users/VICTUS/Documents/sami/dashboard"
       ],
       "~/*": [
-        "/home/sky/eyea-web-client/*"
+        "C:/Users/VICTUS/Documents/sami/dashboard/*"
       ],
       "@": [
-        "/home/sky/eyea-web-client"
+        "C:/Users/VICTUS/Documents/sami/dashboard"
       ],
       "@/*": [
-        "/home/sky/eyea-web-client/*"
+        "C:/Users/VICTUS/Documents/sami/dashboard/*"
       ],
       "~~": [
-        "/home/sky/eyea-web-client"
+        "C:/Users/VICTUS/Documents/sami/dashboard"
       ],
       "~~/*": [
-        "/home/sky/eyea-web-client/*"
+        "C:/Users/VICTUS/Documents/sami/dashboard/*"
       ],
       "@@": [
-        "/home/sky/eyea-web-client"
+        "C:/Users/VICTUS/Documents/sami/dashboard"
       ],
       "@@/*": [
-        "/home/sky/eyea-web-client/*"
+        "C:/Users/VICTUS/Documents/sami/dashboard/*"
       ],
       "assets": [
-        "/home/sky/eyea-web-client/assets"
+        "C:/Users/VICTUS/Documents/sami/dashboard/assets"
       ],
       "assets/*": [
-        "/home/sky/eyea-web-client/assets/*"
+        "C:/Users/VICTUS/Documents/sami/dashboard/assets/*"
       ],
       "public": [
-        "/home/sky/eyea-web-client/public"
+        "C:/Users/VICTUS/Documents/sami/dashboard/public"
       ],
       "public/*": [
-        "/home/sky/eyea-web-client/public/*"
+        "C:/Users/VICTUS/Documents/sami/dashboard/public/*"
       ],
       "pinia": [
-        "/home/sky/eyea-web-client/node_modules/pinia/dist/pinia"
+        "C:/Users/VICTUS/Documents/sami/dashboard/node_modules/pinia/dist/pinia"
       ],
       "#image": [
-        "/home/sky/eyea-web-client/node_modules/@nuxt/image/dist/runtime"
+        "C:/Users/VICTUS/Documents/sami/dashboard/node_modules/@nuxt/image/dist/runtime"
       ],
       "#image/*": [
-        "/home/sky/eyea-web-client/node_modules/@nuxt/image/dist/runtime/*"
+        "C:/Users/VICTUS/Documents/sami/dashboard/node_modules/@nuxt/image/dist/runtime/*"
       ],
       "#apollo": [
-        "/home/sky/eyea-web-client/.nuxt/apollo"
+        "C:/Users/VICTUS/Documents/sami/dashboard/.nuxt/apollo"
       ],
       "#color-mode-options": [
-        "/home/sky/eyea-web-client/.nuxt/color-mode-options"
+        "C:/Users/VICTUS/Documents/sami/dashboard/.nuxt/color-mode-options"
       ],
       "#content/server": [
-        "/home/sky/eyea-web-client/node_modules/@nuxt/content/dist/runtime/server/index"
+        "C:/Users/VICTUS/Documents/sami/dashboard/node_modules/@nuxt/content/dist/runtime/server/index"
       ]
     }
   },
   "include": [
-    "/home/sky/eyea-web-client/.nuxt/types/nitro-nuxt.d.ts",
+    "C:/Users/VICTUS/Documents/sami/dashboard/.nuxt/types/nitro-nuxt.d.ts",
     "./types/nitro.d.ts",
     "../**/*",
     "../server/**/*"

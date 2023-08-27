@@ -5,9 +5,9 @@ import { useField } from "vee-validate";
 const emit = defineEmits(["update:modelValue"]);
 
 const props = defineProps({
-  class :{
-    type:String,
-    default:""
+  class: {
+    type: String,
+    default: "",
   },
   modelValue: {
     type: [String, Number],
@@ -108,8 +108,7 @@ watch(
           errorMessage
             ? 'focus:ring-red-500 focus:border-red-500 hover:border-red-500 border-red-500 border'
             : 'focus:ring-primary  focus:border-primary hover:border-new-tale border-new-tale/30  border',
-            textareaClass
-            
+          textareaClass,
         ]"
         class="block w-full p-2 text-new-tale placeholder-new-tale/60 focus:outline-none text-base rounded-md"
         :placeholder="placeholder"

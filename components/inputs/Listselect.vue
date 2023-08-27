@@ -148,7 +148,7 @@ onMounted(() => {
         :placeholder="props.placeholder"
         :name="props.name"
         :id="id"
-        class="block w-full pr-10  focus:outline-none md:text-base text-sm rounded-md"
+        class="block w-full pr-10 focus:outline-none md:text-base text-sm rounded-md"
         :class="[
           errorMessage
             ? 'focus:ring-red-500 focus:border-red-500 hover:border-red-500 border-red-500 '
@@ -165,7 +165,7 @@ onMounted(() => {
       />
       <!-- icon -->
       <div
-        class="absolute inset-y-0 right-0 pr-3  flex items-center pointer-events-none"
+        class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
       >
         <!-- <component class="h-5 w-5 text-gray-400" :is="trailingIcon"></component> -->
         <Icon name="tabler:chevron-down" width="25" height="25" color="gray" />
@@ -206,7 +206,10 @@ onMounted(() => {
         >
           <span class="block capitalize break-words">{{ item.name }}</span>
           <div class="flex space-x-1">
-            <p class="text-sm text-secondary-text font-light" v-if="item.identifier">
+            <p
+              class="text-sm text-secondary-text font-light"
+              v-if="item.identifier"
+            >
               {{ item.identifier }}
             </p>
             <Icon
